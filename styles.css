@@ -6,7 +6,9 @@
     font-weight: 400;
     font-style: normal;
 }
-
+body {
+    background-color: black;
+}
 /* Text-Colors */
 .text-white {
     color: rgb(255, 255, 255);
@@ -78,7 +80,7 @@ nav li a {
 }
 
 .banner-title,
-.habit-title {
+.habit-title{
     font-size: 4.8rem;
     font-weight: 900;
     color: rgb(255, 255, 255);
@@ -93,13 +95,14 @@ nav li a {
 .banner-image-part {
     display: flex;
     flex-direction: column;
-    margin-top: 105px;
+    /* margin-top: 10%; */
+    position: relative;
     /* margin-bottom: 50px; */
 }
 
 .banner-image {
     width: 100%;
-    height: auto;
+    /* height: auto; */
 }
 
 .dot {
@@ -111,17 +114,25 @@ nav li a {
 }
 
 #image350 {
+    font-size: 1.3rem;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 5px;
-    margin-top: -9.9rem;
+    position: absolute;
+    top: 50%;
+    /* margin-top: -9.9rem; */
 }
 
 #image500 {
-    margin-top: 50px;
+    font-size: 2rem;
+    position: absolute;
+    right: -10%;
+    top: 30%;
+    /* bottom: 2%; */
+    /* margin-top: 50px;
     margin-bottom: -300px;
-    margin-left: 250px;
+    margin-left: 250px; */
 }
 
 .banner-description,
@@ -140,6 +151,7 @@ nav li a {
     font-size: 1.2rem;
     font-weight: 600;
     padding: 1rem 2.3rem;
+    border: none;
     border-radius: 42px;
     background: rgb(230, 83, 60);
 }
@@ -154,15 +166,15 @@ nav li a {
     border-radius: 12px;
     background: rgba(48, 48, 48, 0.54);
     width: 9rem;
-    height: 4.5rem;
+    /* height: 4.5rem; */
     backdrop-filter: blur(20px);
-    padding: 1.3rem 1.5rem 1.3rem 1.5rem;
+    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
     text-align: left;
 
 }
 
 .trans-btn h3 {
-    font-size: 40px;
+   
     font-weight: 900;
     color: rgb(255, 255, 255);
     margin: 0;
@@ -197,6 +209,7 @@ nav li a {
     .banner-image-part {
         width: 80%;
         margin-top: -7rem;
+        
     }
 
     .nav-btn-container {
@@ -208,17 +221,13 @@ nav li a {
         font-size: 0.7rem;
     }
 
-    #image350,
-    #image500 {
-        display: none;
-    }
 }
 
 /* Banner Ends */
 
 /* Habit Section Related Styles */
 .habit {
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -283,6 +292,7 @@ nav li a {
     width: 80%;
     /* height: 312px; */
     border-radius: 18px;
+    margin-bottom: 0.5rem;
 }
 
 .run-contents {
@@ -292,7 +302,7 @@ nav li a {
 }
 
 .run-bg {
-    background-color: black;
+    /* background-color: black; */
     display: flex;
     justify-content: center;
 }
@@ -315,3 +325,70 @@ nav li a {
     }
 }
 /* Run Section Ends */
+
+/* BMI Calculator Style */
+.bmi-section{
+    /* background-color: black; */
+}
+.bmi-title{
+    font-size: 3rem;
+    font-weight: 900;
+    margin: 3rem 0 0 0;
+}
+.chart-table{
+    border-collapse: collapse;
+}
+th, td{
+    border: 1px solid rgba(255, 255, 255, 0.418);
+    padding: 0.4rem;
+ }
+ .calc{
+    display: flex;
+ }
+ .bmi-heading{
+    padding: 0.5rem;
+    text-align: left;
+    margin: 0% 20%;
+ }
+ .calc{
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    padding: 5%;
+ }
+ .bmi-chart{
+    width: 50%;
+    /* padding: 0 2% ; */
+    margin-left: 3rem;
+ }
+ .bmi-calc{
+    width: 50%;
+    /* padding: 2%; */
+ }
+ .calc-input{
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    width: 17rem;
+    height: 3rem;
+    border: none;
+    margin: 5px; 
+    padding-left: 1rem;
+ }
+ .calc-input-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+ }
+ .calculate-btn{
+    margin-top: 2rem;
+ }
+ @media screen and (max-width: 576px){
+    .calc-input-container{
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        margin-left: 3.5rem;
+    }
+    .calc{
+        flex-direction: column;
+    }
+ }
