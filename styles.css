@@ -7,30 +7,32 @@
     font-style: normal;
 }
 
+/* Text-Colors */
+.text-white {
+    color: rgb(255, 255, 255);
+}
+
+.text-grey {
+    color: rgba(255, 255, 255, 0.5);
+}
+
 /* header styles */
 .heading-part {
-    /* background-color: black; */
     background: linear-gradient(180.00deg, rgb(37, 37, 37), rgba(119, 119, 119, 0) 100%), black;
-    /* width: 1440px;
-    height: 715px; */
-    padding: 10px;
-    height: 635px;
+    padding: 50px 240px;
 }
 
 /* Nav Related Styles */
 .fitness-logo {
     color: rgb(230, 83, 60);
-    font-size: 2.3rem;
+    font-size: 2em;
     font-weight: 800;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-align: left;
     font-style: italic;
 }
 
 nav>ul {
     display: flex;
-    gap: 3rem;
+    /* gap: 3rem; */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 2.5rem;
     padding: 0 10px;
@@ -39,28 +41,25 @@ nav>ul {
 
 nav li {
     list-style: none;
+    margin-right: 30px;
+    padding: 12px;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 nav li a {
     text-decoration: none;
     color: rgb(255, 255, 255);
+
 }
 
 .navbar {
     display: flex;
-    justify-content: center;
-    gap: 27rem;
+    justify-content: space-between;
     align-items: center;
+    /* margin-left: 10px; */
 }
 
-.nav-btn {
-    padding: 12px;
-    font-size: 1.3rem;
-    font-weight: 400;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-align: left;
-}
 
 /* banner styles */
 .shape-font {
@@ -69,25 +68,26 @@ nav li a {
 
 .banner {
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
     gap: 9rem;
-    /* align-items: center; */
-    /* margin-bottom: 50px; */
 }
 
 .banner-contents {
-    width: 32.5rem;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-.banner-title {
-    font-size: 78px;
+.banner-title,
+.habit-title {
+    font-size: 4.8rem;
     font-weight: 900;
-    line-height: 120%;
-    letter-spacing: 0%;
-    text-align: left;
     color: rgb(255, 255, 255);
     margin-bottom: 10px;
+}
+
+.banner-btn {
+    display: flex;
+    gap: 0.5rem;
 }
 
 .banner-image-part {
@@ -95,6 +95,11 @@ nav li a {
     flex-direction: column;
     margin-top: 105px;
     /* margin-bottom: 50px; */
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
 }
 
 .dot {
@@ -119,7 +124,8 @@ nav li a {
     margin-left: 250px;
 }
 
-.banner-description {
+.banner-description,
+.habit-des {
     font-size: 1rem;
     font-weight: 400;
     line-height: 24px;
@@ -133,8 +139,6 @@ nav li a {
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     font-weight: 600;
-    line-height: 22px;
-    letter-spacing: 0px;
     padding: 1rem 2.3rem;
     border-radius: 42px;
     background: rgb(230, 83, 60);
@@ -149,8 +153,8 @@ nav li a {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     background: rgba(48, 48, 48, 0.54);
-    width: 150px;
-    height: 60px;
+    width: 9rem;
+    height: 4.5rem;
     backdrop-filter: blur(20px);
     padding: 1.3rem 1.5rem 1.3rem 1.5rem;
     text-align: left;
@@ -173,4 +177,141 @@ nav li a {
     text-align: left;
     margin: 0;
 }
-/* Banner Finished */
+
+@media screen and (max-width: 576px) {
+
+    /* Banner and Navbar */
+    .banner {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .banner-title {
+        font-size: 2.8rem;
+    }
+
+    .heading-part {
+        padding: 20px;
+    }
+
+    .banner-image-part {
+        width: 80%;
+        margin-top: -7rem;
+    }
+
+    .nav-btn-container {
+        display: none;
+    }
+
+    .btn,
+    .red-btn {
+        font-size: 0.7rem;
+    }
+
+    #image350,
+    #image500 {
+        display: none;
+    }
+}
+
+/* Banner Ends */
+
+/* Habit Section Related Styles */
+.habit {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.habit-title {
+    font-size: 3rem;
+}
+
+.habit-img-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.habit-img img {
+    border-radius: 50%;
+    border: 2px solid gray;
+}
+
+.habit-img {
+    text-align: center;
+    padding: 20%;
+}
+
+@media screen and (max-width: 576px) {
+    .habit-img-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .habit-img {
+        padding: 5px;
+    }
+
+    .habit-title,
+    .habit-des {
+        text-align: center;
+
+    }
+
+    .habit {
+        padding: 10%;
+    }
+}
+
+/* Habit Style Section Ends */
+
+/* Run Section Styles */
+.run {
+    background-color: rgb(34, 34, 34);
+    display: flex;
+    width: 70%;
+    border-radius: 18px;
+    align-items: center;
+    justify-content: space-between;
+}
+.run-img{
+    display: flex;
+    justify-content: center;
+}
+.run-img img {
+    width: 80%;
+    /* height: 312px; */
+    border-radius: 18px;
+}
+
+.run-contents {
+    text-align: left;
+    padding: 0% 8% 2%;
+    letter-spacing: 0.3px;
+}
+
+.run-bg {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.run-title {
+    font-size: 3rem;
+}
+@media screen and (max-width: 576px){
+    .run {
+        flex-direction: column;
+    }
+    .run-title{
+        font-size: 2rem;
+    }
+    .run-contents{
+        width: %;
+    }
+    .join-now-btn{
+        width: 100%;
+    }
+}
+/* Run Section Ends */
