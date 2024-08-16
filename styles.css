@@ -149,15 +149,16 @@ nav li a {
     color: rgba(150, 146, 146, 0.562);
 }
 
-.red-btn,
-.btn {
+.btn, .red-btn{
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     font-weight: 600;
     padding: 1rem 2.3rem;
-    border: none;
     border-radius: 42px;
     background: rgb(230, 83, 60);
+}
+.red-btn{
+    border: none;
 }
 
 .btn {
