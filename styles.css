@@ -20,6 +20,7 @@ body {
 
 .text-grey {
     color: rgba(255, 255, 255, 0.5);
+    letter-spacing: 0.5px;
 }
 
 /* header styles */
