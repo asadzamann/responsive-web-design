@@ -31,7 +31,7 @@ body {
 /* Nav Related Styles */
 .fitness-logo {
     color: rgb(230, 83, 60);
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 800;
     font-style: italic;
 }
@@ -52,6 +52,22 @@ nav li {
     font-size: 1.3rem;
     font-weight: 400;
 }
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
 
 nav li a {
     text-decoration: none;
@@ -149,7 +165,8 @@ nav li a {
     color: rgba(150, 146, 146, 0.562);
 }
 
-.btn, .red-btn{
+.btn,
+.red-btn {
     color: rgb(255, 255, 255);
     font-size: 1.2rem;
     font-weight: 600;
@@ -157,7 +174,8 @@ nav li a {
     border-radius: 42px;
     background: rgb(230, 83, 60);
 }
-.red-btn{
+
+.red-btn {
     border: none;
 }
 
@@ -203,12 +221,20 @@ nav li a {
         margin-left: 0;
     }
 
+    body {
+        margin-right: 0;
+    }
+
     .banner-title {
         font-size: 2.8rem;
     }
 
     .heading-part {
         padding: 20px;
+    }
+
+    .hamburger-icon {
+        display: inline-block;
     }
 
     .banner-image-part {
@@ -493,14 +519,15 @@ footer {
     justify-content: center;
 }
 
-.footer-logo{
-    margin: 2rem;
-}
-.started-section{
+.footer-logo {
     margin: 2rem;
 }
 
-.footer-logo .fitness-logo{
+.started-section {
+    margin: 2rem;
+}
+
+.footer-logo .fitness-logo {
     font-size: 4rem;
 }
 
@@ -522,11 +549,15 @@ footer {
 .footer-title {
     text-align: center;
     padding-bottom: 10px;
-    font-size: 20px; 
-    height: 24px 
+    font-size: 20px;
+    height: 24px
 }
-@media screen and (max-width: 576px){
-    .footer{grid-template-columns: repeat(1, 1fr);
-    height: 100%;} 
+
+@media screen and (max-width: 576px) {
+    .footer {
+        grid-template-columns: repeat(1, 1fr);
+        height: 100%;
+    }
 }
+
 /* footer finished */
